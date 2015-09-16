@@ -8,7 +8,7 @@
 //then run the program
 //      java Check//
 
-import java.util.Scanner;
+import java.util.Scanner; 
 
 //define a class
 public class Check{
