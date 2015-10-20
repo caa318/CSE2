@@ -9,7 +9,7 @@ then run the program
       java encrypted_x
       */
       
-import java.util.Scanner; 
+import java.util.,Scanner; 
 
 //define a class
 public class encrypted_x{
@@ -26,12 +26,18 @@ public class encrypted_x{
                 allowed=true;
             }
             else{
-                System.out.println("Error: need a positive integer.  Try again: ");
+                System.out.print("Error: integer must be within [0,100].  Try again: ");
                 myScanner.next();
             }
-            if (height<0 || height>100){
-                System.out.println("Error: integer must be within desired range.  Try again: ");
-                myScanner.next();
+            while (height<0 || height>100){
+                System.out.print("Error: integer must be within [0,100].  Try again: ");
+                if(myScanner.hasNextInt()){
+                    height=myScanner.nextInt();
+                    allowed=true;
+                }
+                else{
+                    myScanner.next();
+                }
             }
         }
        
@@ -46,59 +52,5 @@ public class encrypted_x{
         }
         System.out.println();
     }
-       /* 
-        int count=0; 
-        int i=0;
-        int j=0;
-        for(i=0;i<input;i++){
-            count++; 
-            for(j=0;j<count;j++){
-                  System.out.print("*"); 
-            }
-          System.out.print(" ");   
-          System.out.println(); 
-        }
-        /*
-        for (int i=0; i<(input/2)-1; i++){
-            int a=((input)-((input)-i));
-            int b=(((input)-i)-2);
-            
-            
-            
-            
-            for (int j=0;j<a;j++){
-                System.out.print("*");
-            }
-            System.out.print(" ");
-            for(int j=0;j<2*b;j++){
-                System.out.print("*");
-            }
-            System.out.print(" ");
-            for (int j=0;j<a;j++){
-                System.out.print("*");
-            }
-            System.out.print("\n");
-        }
-        for (int i=input/2; i>0; i--){
-            int a=((input)-((input)-i));
-            int b=(((input)-i)-2);
-            
-            
-            
-            
-            for (int j=0;j<a;j++){
-                System.out.print("*");
-            }
-            System.out.print(" ");
-            for(int j=0;j<2*b;j++){
-                System.out.print("*");
-            }
-            System.out.print(" ");
-            for (int j=0;j<a;j++){
-                System.out.print("*");
-            }
-            System.out.print("\n");
-        }
-        */
   }
 }
