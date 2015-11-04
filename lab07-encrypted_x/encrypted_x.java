@@ -9,7 +9,7 @@ then run the program
       java encrypted_x
       */
       
-import java.util.,Scanner; 
+import java.util.Scanner; 
 
 //define a class
 public class encrypted_x{
